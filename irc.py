@@ -9,7 +9,8 @@ class ClosingBot(irc.IRCClient):
     def signedOn(self):
         self.join(self.channel)
 
-    def a
+    def privmsg(self, user, channel, message):
+        self.data.cmd(user, message)
    
 class ClosingFactory(protocol.ClientFactory):
    
